@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="devproject.css" />
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <div class="modal">
+        <div class="modal-window">
+            <span>&#x2718;</span>
+            <h1>hello world!!!</h1>
+        </div>
+        </div>
+        <div class="main">
+            <h1><span>good at</span><br /><span>business?</span></h1>
+            <a href="#">learn more now <i class="ion-chevron-right"></i></a>
+        </div>
+        <script src="jquery-3.2.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+               $(".main a").click(function(){
+                  $(".modal").css('display','flex'); 
+               });
+               $(".modal-window span").click(function(){
+                  $(".modal").css('display','none'); 
+               });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    background-image: url(busines.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vh;
+}
+.main
+{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 6%;
+    z-index: -1;
+}
+.main h1
+{
+    text-transform: uppercase;
+    color: yellow;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+}
+.main h1 span
+{
+    display:inline-block;
+    background-color: black;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+}
+.main a
+{
+    display: inline-block;
+    background-color: yellow;
+    color:black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 3px 8px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    transform: translateX(0px);
+    transition: transform .5s ease-out;
+}
+.main a:hover
+{
+    transform: translateX(20px);
+    box-shadow: 0px 0px 6px black;
+}
+
+/*---------------media querier----------------*/
+@media (max-width:700px)
+{
+    .main
+    {
+        right: 4%;
+    }
+    .main h1
+    {
+        font-size:60px;
+    }
+    .main a
+    {
+        font-size:20px; 
+    }
+}
+@media (max-width:400px)
+{ 
+    .main
+    {
+        right: 2%;
+    }
+    .main h1
+    {
+    font-size:40px;
+    }
+    .main a
+    {
+        font-size: 15px;
+    }
+}
+/*--------------------modal------------------*/
+.modal
+{
+    background-color: rgba(255,255,0,0.8);
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    overflow: hidden;
+}
+.modal-window
+{
+    color: black;
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    position:relative;
+    background-color: white;
+    animation: pranai .4s 0s 1 ease-in;
+    box-shadow: 0px 0px 5px black;
+}
+@keyframes pranai
+{
+    0%
+    { 
+        transform: translateY(-20px);
+    }
+    60%
+    {
+        transform: translateY(0px);
+    }
+    80%
+    {
+        transform: translateY(-5px);
+    }
+    100%
+    {
+       transform: translateY(0px);
+    }
+}
+.modal-window h1
+{
+    margin: auto;
+    text-transform: lowercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    color: black;
+    font-style: italic;
+}
+.modal-window span
+{
+    font-size: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top:-30px;
+    right: -30px;
+    color: black;
+    cursor: pointer;
+}
